@@ -1,3 +1,94 @@
 body {
-    background: orange;
+    background: linear-gradient(to right, rgb(135, 180, 106, 0.5) 60%, transparent 50%);
+    width: 200px;
+    /* Breite des Elements */
+    height: 200px;
+    /* Höhe des Elements */
+}
+
+#progress {
+    width: 360px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 3px solid var(--Bright-Green-medium, #87B46A);
+    background: #87B46A;
+}
+
+h1 {
+    width: 675px;
+    height: 77px;
+    color: #000;
+    font-family: Gabarito;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+h2 {
+    width: 334px;
+    height: 30px;
+    color: #000;
+    font-family: Gabarito;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+h3 {
+    color: #000;
+    font-family: Gabarito;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+p {
+    color: #000;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.nav {
+    width: 131px;
+    height: 30px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #000;
+    font-family: Gabarito;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.punktestand {
+    width: 200px;
+    /* Breite der Fortschrittsleiste */
+    height: 20px;
+    /* Höhe der Fortschrittsleiste */
+    border: 1px solid #87B46A;
+    /* Rahmen um die Fortschrittsleiste */
+    background-color: #87B46A;
+    /* Hintergrundfarbe der Fortschrittsleiste */
+    border-radius: 15px;
+    width: 441px;
+    height: 48px;
+    flex-shrink: 0;
+
+}
+
+.fortschritt {
+    height: 100%;
+    width: 0;
+    background-color: #37492B;
+    /* Farbe des Fortschrittsbalkens */
 }
