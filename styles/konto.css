@@ -92,3 +92,8 @@ p {
     background-color: #37492B;
     /* Farbe des Fortschrittsbalkens */
 }
+
+
+@media screen and (min-width: 1084px) {
+    /* CSS-Regeln, die für Bildschirme mit mindestens 600 Pixel Breite gelten */
+  }
