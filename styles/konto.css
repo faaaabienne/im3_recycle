@@ -59,20 +59,7 @@ p {
     font-weight: 500;
 }
 
-/* .nav {
-    width: 131px;
-    height: 30px;
-    flex-shrink: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #000;
-    font-family: Gabarito;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-} */
+/* Ladebalken */ 
 
 .punktestand {
     width: 200px;
@@ -88,6 +75,7 @@ p {
     height: 48px;
     flex-shrink: 0;
     margin-top: 50px;
+    margin-left: 60px;
     display: flex;
 
 }

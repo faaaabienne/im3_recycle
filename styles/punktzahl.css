@@ -1,0 +1,146 @@
+body {
+    background: linear-gradient(to right, rgba(135, 180, 106, 0.5) 50%, transparent 50%);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 414px) {
+    body {
+        background-size: 100% auto;
+    }
+}
+
+
+#progress {
+    width: 360px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 3px solid var(--Bright-Green-medium, #87B46A);
+    background: #87B46A;
+}
+
+.textMain {
+    padding-left: 60px;
+}
+
+
+h1 {
+
+    color: #000;
+    font-family: Gabarito;
+    font-size: 80px;
+    font-weight: 900;
+
+}
+
+h2 {
+
+    color: #000;
+    font-family: Gabarito;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+h3 {
+    color: #000;
+    font-family: Gabarito;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #000;
+    font-family: Raleway;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/* Ladebalken */
+
+.punktestand {
+    width: 200px;
+    /* Breite der Fortschrittsleiste */
+    height: 20px;
+    /* Höhe der Fortschrittsleiste */
+    border: 1px solid #87B46A;
+    /* Rahmen um die Fortschrittsleiste */
+    background-color: #87B46A;
+    /* Hintergrundfarbe der Fortschrittsleiste */
+    border-radius: 15px;
+    width: 441px;
+    height: 48px;
+    flex-shrink: 0;
+    margin-top: 50px;
+    display: flex;
+
+}
+
+.fortschritt {
+    height: 100%;
+    width: 0;
+    background-color: #37492B;
+    /* Farbe des Fortschrittsbalkens */
+}
+
+/* Button stylen */
+
+.neuenArtikelButton,
+.meinKontoButton {
+    width: 189px;
+    height: 52px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Raleway;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: flex;
+    border-radius: 15px;
+
+}
+
+/* CSS für den Hover-Effekt */
+.neuenArtikelButton:hover,
+.meinKontoButton:hover {
+    background-color: #87B46A
+        /* Hintergrundfarbe des Buttons bei Hover */
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 250px;
+    height: 250px;
+}
+
+/* Navigation links */
+.menu a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #000;
+    font-family: Gabarito;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* On hover, the links will change color */
+.menu a:hover {
+    color: #87B46A;
+}
+
+@media screen and (max-width: 390px) {
+    /* CSS-Regeln, die für Bildschirme mit mindestens 600 Pixel Breite gelten */
+}
