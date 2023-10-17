@@ -9,15 +9,17 @@
 </head>
 
 <body>
-    <div>
-        <header>
-            <div>
-                <h4>Über Uns</h4>
-            </div>
-        </header>
+    <header>
+        <img id="logo" src="images/Logo.png" alt="logo">
+        <div class="menu">
+            <a href="#about">Über Uns</a>
+            <a href="#account">Mein Konto</a>
+        </div>
+    </header>
 
-        <main>
-            <div class="textMain">
+
+    <main>
+        <div class="textMain">
             <h1>MEIN KONTO</h1>
             <h2>Persönliche Daten</h2>
             <div>
@@ -26,15 +28,14 @@
                 <h3>Mail:</h3>
                 <h3>Punktestand:</h3>
             </div>
-    </div>
-    <div class="punktestand">
-        <div class="fortschritt" id="punktestand-fortschritt"></div>
-    </div>
+        </div>
+        <div class="punktestand">
+            <div class="fortschritt" id="punktestand-fortschritt"></div>
+        </div>
 
-    <script type="module" src="../../00_setup/supabase.js"></script>
-    <script type="module" src="2_password.js"></script>
+        <script type="module" src="../../00_setup/supabase.js"></script>
+        <script type="module" src="2_password.js"></script>
     </main>
-    </div>
 </body>
 
 </html>
