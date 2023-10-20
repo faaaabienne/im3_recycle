@@ -1,3 +1,47 @@
-body{
-    background-color: aqua;
+body {
+    background-color: white;
+}
+
+
+h1 {
+    color: #000;
+    font-family: Gabarito;
+    font-size: 80px;
+    font-weight: 900;
+
+}
+
+h2 {
+    color: #000;
+    font-family: Gabarito;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+p {
+    color: #000;
+    font-family: Raleway;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+/* Navigation links */
+.menu a {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #000;
+    font-family: Gabarito;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* On hover, the links will change color */
+.menu a:hover {
+    color: #87B46A;
 }

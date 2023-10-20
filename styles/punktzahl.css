@@ -10,7 +10,6 @@ body {
     }
 }
 
-
 #progress {
     width: 360px;
     height: 53px;
@@ -20,8 +19,10 @@ body {
     background: #87B46A;
 }
 
-.textMain {
+
+.inhaltMain {
     padding-left: 60px;
+    padding-right: 60px;
 }
 
 
@@ -94,12 +95,15 @@ p {
     flex-shrink: 0;
     color: #000;
     font-family: Raleway;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
-    margin-bottom: 50px;
+    margin: 50px 10px;
     margin-top: 50px;
-    display: flex;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
     border-radius: 15px;
+    border: none;
 
 }
 
@@ -119,6 +123,22 @@ header {
 #logo {
     width: 250px;
     height: 250px;
+    margin-top: 30px;
+}
+
+/* Bild Pflanze mit Smile */ 
+.containerSmile img {
+    max-width: 50%;
+    /* Begrenzt die Breite des Bildes auf die Hälfte des Containers */
+    height: auto;
+    height: 530px;
+    display: flex;
+    justify-content: space-between;
+    /* Platziert die Elemente mit Abstand zwischen ihnen */
+    align-items: center;
+    width: 50%;
+    /* Breite auf 50% setzen, um die rechte Hälfte einzunehmen */
+    float: right;
 }
 
 /* Navigation links */
@@ -136,10 +156,12 @@ header {
     line-height: normal;
 }
 
+
 /* On hover, the links will change color */
 .menu a:hover {
     color: #87B46A;
 }
+
 
 @media screen and (max-width: 390px) {
     /* CSS-Regeln, die für Bildschirme mit mindestens 600 Pixel Breite gelten */

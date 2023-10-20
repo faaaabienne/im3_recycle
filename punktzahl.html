@@ -10,19 +10,20 @@
 
 <body>
     <header>
-        <a <a href="main.html">
+        <a href="main.html">
             <img id="logo" src="images/Logo.png" alt="logo">
         </a>
 
         <div class="menu">
             <a href="#about">Über Uns</a>
-            <a href="#account">Mein Konto</a>
+            <a href="konto.html">Mein Konto</a>
         </div>
     </header>
 
-    <main>
+    <main class="inhaltMain">
         <div class="textMain">
-            <h1>DEINE NEUE PUNKTZAHL</h1>
+            <h1>DEINE NEUE <br>
+                PUNKTZAHL</h1>
             <h2>Persönliche Daten</h2>
             <div>
                 <h3>Punkte:</h3>
@@ -32,11 +33,18 @@
             <div class="fortschritt" id="punktestand-fortschritt"></div>
         </div>
 
-        <button type="button" class="neuenArtikelButton">Neuen Artikel erfassen</button>
-        <button type="button" class="meinKontoButton">Mein Konto</button>
+        <button type="button" class="neuenArtikelButton" onclick="window.location.href='devices.html'">Neuen Artikel
+            erfassen</button>
+        <button type="button" class="meinKontoButton" onclick="window.location.href='konto.html'">Mein Konto</button>
 
         <script type="module" src="scripts/konto.js"></script>
+
+        <div class="containerSmile">
+            <img src="images/smileplant.svg" alt="smileplant">
+        </div>
+
     </main>
+
 </body>
 
 </html>
