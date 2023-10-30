@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/stores.css">
+    <title>im3_recycle</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="images/Logo.png" alt="logo">
+        <div class="menu">
+            <a href="#about">Mein Konto</a>
+            <a href="#account">Über Uns</a>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="textMain">
+            <h1>Wähle dein <br> Gerät aus: </h1>
+            <t>Lorem ipsum dolor sit amet consectetur. Gravida a est ac erat nibh eget feugiat. <br>
+                 Amet fermentum magnis ipsum turpis ut tempus. Tellus risus faucibus at vitae sagittis <br>
+                 nunc et nunc. Lorem ipsum dolor sit amet consectetur. Gravida a est ac erat nibh eget feugiat.</t>
+            <div>
+                
+            
+            
+    
+        </div>
+
+        <title>Elektrogeräteauswahl</title>
+    
+    </head>
+    <body>
+        <div class="auswahl-container">
+            <div class="kategorie">
+                <input type="radio" name="kategorie" value="haushaltsartikel"> Haushaltsartikel
+            </div>
+            <div class="kategorie">
+                <input type="radio" name="kategorie" value="multimedia"> Multimedia
+            </div>
+            <div class="kategorie">
+                <input type="radio" name="kategorie" value="kamera"> (Video) Kamera
+            </div>
+            <div class="kategorie">
+                <input type="radio" name="kategorie" value="smartphone"> Smartphone
+            </div>
+            <div class="kategorie">
+                <input type="radio" name="kategorie" value="tablets"> Tablets
+            </div>
+            <div class="kategorie">
+                <input type="radio" name="kategorie" value="anderes"> Anderes
+            </div> class="button"
+            <button onclick="bestätigen()">Bestätigen</button>
+        </div>
+        <script>
+            function bestätigen() {
+                var ausgewählteKategorie = document.querySelector('input[name="kategorie"]:checked');
+                if (ausgewählteKategorie) {
+                    alert('Sie haben die Kategorie ' + ausgewählteKategorie.value + ' ausgewählt.');
+                } else {
+                    alert('Bitte wählen Sie eine Kategorie aus.');
+                }
+            }
+        </script>
+        
+    
+
+        <script type="module" src="../../00_setup/supabase.js"></script>
+        <script type="module" src="2_password.js"></script>
+    </main>
+</body>
+
+</html>
