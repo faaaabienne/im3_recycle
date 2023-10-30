@@ -1,9 +1,32 @@
 body {
-    background-color: white;
+    background: linear-gradient(to right, rgba(135, 180, 106, 0.5) 50%, transparent 50%);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 414px) {
+    body {
+        background-size: 100% auto;
+    }
+}
+
+
+#progress {
+    width: 360px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 3px solid var(--Bright-Green-medium, #87B46A);
+    background: #87B46A;
+}
+
+.textMain {
+    padding-left: 60px;
 }
 
 
 h1 {
+
     color: #000;
     font-family: Gabarito;
     font-size: 80px;
@@ -12,6 +35,7 @@ h1 {
 }
 
 h2 {
+
     color: #000;
     font-family: Gabarito;
     font-size: 40px;
@@ -24,11 +48,52 @@ p {
     font-family: Raleway;
     font-size: 25px;
     font-weight: 500;
+    max-width: 50%;
+}
+
+/* Ladebalken */ 
+
+.punktestand {
+    width: 200px;
+    /* Breite der Fortschrittsleiste */
+    height: 20px;
+    /* Höhe der Fortschrittsleiste */
+    border: 1px solid #87B46A;
+    /* Rahmen um die Fortschrittsleiste */
+    background-color: #87B46A;
+    /* Hintergrundfarbe der Fortschrittsleiste */
+    border-radius: 15px;
+    width: 441px;
+    height: 48px;
+    flex-shrink: 0;
+    margin-top: 50px;
+    margin-left: 60px;
+    display: flex;
+
+}
+
+.fortschritt {
+    height: 100%;
+    width: 0;
+    background-color: #37492B;
+    /* Farbe des Fortschrittsbalkens */
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px; 
 }
 
 /* Navigation links */
 .menu a {
-    float: right;
+    float: left;
     display: block;
     text-align: center;
     padding: 14px 16px;
@@ -46,8 +111,20 @@ p {
     color: #87B46A;
 }
 
-#logo {
-    width: 250px;
-    height: 250px;
-    margin-top: 30px;
+.containerSmile img {
+    max-width: 50%;
+    /* Begrenzt die Breite des Bildes auf die Hälfte des Containers */
+    height: auto;
+    height: 530px;
+    display: flex;
+    justify-content: space-between;
+    /* Platziert die Elemente mit Abstand zwischen ihnen */
+    align-items: center;
+    width: 50%;
+    /* Breite auf 50% setzen, um die rechte Hälfte einzunehmen */
+    float: right;
+}
+
+@media screen and (max-width: 390px) {
+    /* CSS-Regeln, die für Bildschirme mit mindestens 600 Pixel Breite gelten */
 }
