@@ -7,28 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>im3_recycle</title>
     <link rel="stylesheet" href="styles/main.css">
-    <script src="https://unpkg.com/@supabase/supabase-js@2"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
 
 </head>
 
 <body>
-    <div>
-        <header>
-            <div class="container">
-                <div class="container_logo">
-                    <a></a>
-                </div>
-            </div>
-            <div class="menu">
-                <a href="#about">Über Uns</a>
-            </div>
-            </div>
-        </header>
+    <header>
+        <a href="main.html">
+            <img id="logo" src="images/Logo.png" alt="logo">
+        </a>
 
-        <main>
+        <div class="menu">
+            <a href="#about">Über Uns</a>
+            <a href="konto.html">Mein Konto</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="textMain">
             <h1>Recycle, go Green</h1>
-            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
                 labore et
                 dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
                 Stet
@@ -40,18 +37,31 @@
                 no
                 sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
             <h2>Meld dich an!</h2>
-            <input type="email" id="emailInput" placeholder="Name" /> <br></br>
-            <input type="password" id="passwordInput" placeholder="Passwort" /> <br></br>
-            <button id="loginButton">Login</button>
-            <p> Noch kein Konto? </p>
-            <button id="signUpButton">Sign Up</button>
+        </div>
 
-            <script type="module" src="../../00_setup/supabase.js"></script>
-            <script type="module" src="2_password.js"></script>
-        </main>
+        <div id="auth">
+            <input type="email" id="email" placeholder="Email"><br>
+            <input type="password" id="password" placeholder="Passwort"><br>
+            <button onclick="login()">Anmelden</button><br>
+            <button onclick="register()">Registrieren</button>
+        </div>
 
-        <footer>
-        </footer>
+        <div id="dashboard" hidden>
+            <h2>Welcome, <span id="userEmail"></span></h2>
+            <p>Deine Punkte: <span id="points">0</span></p>
+            <button onclick="addPoints()">Punkte hinzufügen</button>
+            <button onclick="logout()">Abmelden</button>
+        </div>
+
+        <script type="module" src="../../00_setup/supabase.js"></script>
+        <script type="module" src="2_password.js"></script>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
 </body>
 
 </html>

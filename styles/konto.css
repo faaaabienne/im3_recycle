@@ -119,6 +119,20 @@ header {
     color: #87B46A;
 }
 
+.containerSmile img {
+    max-width: 50%;
+    /* Begrenzt die Breite des Bildes auf die Hälfte des Containers */
+    height: auto;
+    height: 530px;
+    display: flex;
+    justify-content: space-between;
+    /* Platziert die Elemente mit Abstand zwischen ihnen */
+    align-items: center;
+    width: 50%;
+    /* Breite auf 50% setzen, um die rechte Hälfte einzunehmen */
+    float: right;
+}
+
 @media screen and (max-width: 390px) {
     /* CSS-Regeln, die für Bildschirme mit mindestens 600 Pixel Breite gelten */
 }
