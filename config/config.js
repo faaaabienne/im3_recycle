@@ -10,3 +10,4 @@ const supa = supabase.createClient(supabaseUrl, supabaseKey, {
 });
 
 export { supa }
+
