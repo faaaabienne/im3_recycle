@@ -72,6 +72,28 @@ p {
     line-height: normal;
 }
 
+.weiterButton {
+    width: 189px;
+    height: 52px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 50px 10px;
+    margin-top: 50px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+}
+
+/* CSS für den Hover-Effekt */
+.weiterButton:hover {
+    background-color: #87B46A
+        /* Hintergrundfarbe des Buttons bei Hover */
+}
 /* .nav {
     width: 131px;
     height: 30px;
@@ -180,10 +202,5 @@ header {
     background-color: blue; /* Hintergrundfarbe */
     border-radius: 10px; /* Radius der abgerundeten Ecken (10px für ein Quadrat) */
     cursor: pointer; /* Ändert den Mauszeiger, um zu zeigen, dass das Element anklickbar ist */
-
-}
-
-#Zeigefinger {
-    
 
 }

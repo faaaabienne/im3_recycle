@@ -22,57 +22,61 @@
         <div class="textMain">
             <h1>Wähle dein <br> Gerät aus: </h1>
             <t>Lorem ipsum dolor sit amet consectetur. Gravida a est ac erat nibh eget feugiat. <br>
-                 Amet fermentum magnis ipsum turpis ut tempus. Tellus risus faucibus at vitae sagittis <br>
-                 nunc et nunc. Lorem ipsum dolor sit amet consectetur. Gravida a est ac erat nibh eget feugiat.</t>
+                Amet fermentum magnis ipsum turpis ut tempus. Tellus risus faucibus at vitae sagittis <br>
+                nunc et nunc. Lorem ipsum dolor sit amet consectetur. Gravida a est ac erat nibh eget feugiat.</t>
             <div>
-                
-            
-            
-    
-        </div>
 
-        <title>Elektrogeräteauswahl</title>
-    
-    </head>
-    <body>
-        <div class="auswahl-container">
-            <div class="kategorie">
-                <input type="radio" name="kategorie" value="haushaltsartikel"> Haushaltsartikel
-            </div>
-            <div class="kategorie">
-                <input type="radio" name="kategorie" value="multimedia"> Multimedia
-            </div>
-            <div class="kategorie">
-                <input type="radio" name="kategorie" value="kamera"> (Video) Kamera
-            </div>
-            <div class="kategorie">
-                <input type="radio" name="kategorie" value="smartphone"> Smartphone
-            </div>
-            <div class="kategorie">
-                <input type="radio" name="kategorie" value="tablets"> Tablets
-            </div>
-            <div class="kategorie">
-                <input type="radio" name="kategorie" value="anderes"> Anderes
-            </div> class="button"
-            <button onclick="bestätigen()">Bestätigen</button>
-        </div>
-        <script>
-            function bestätigen() {
-                var ausgewählteKategorie = document.querySelector('input[name="kategorie"]:checked');
-                if (ausgewählteKategorie) {
-                    alert('Sie haben die Kategorie ' + ausgewählteKategorie.value + ' ausgewählt.');
-                } else {
-                    alert('Bitte wählen Sie eine Kategorie aus.');
-                }
-            }
-        </script>
 
-        <img id="Zeigefinger" src="images/Geraeteauswahl_iPad.svg" alt="Zeigefinger">
-        
-    
 
-        <script type="module" src="../../00_setup/supabase.js"></script>
-        <script type="module" src="2_password.js"></script>
+
+            </div>
+
+            <title>Elektrogeräteauswahl</title>
+
+            </head>
+
+            <body>
+                <div class="auswahl-container">
+                    <div class="kategorie">
+                        <input type="radio" name="kategorie" value="haushaltsartikel"> Haushaltsartikel
+                    </div>
+                    <div class="kategorie">
+                        <input type="radio" name="kategorie" value="multimedia"> Multimedia
+                    </div>
+                    <div class="kategorie">
+                        <input type="radio" name="kategorie" value="kamera"> (Video) Kamera
+                    </div>
+                    <div class="kategorie">
+                        <input type="radio" name="kategorie" value="smartphone"> Smartphone
+                    </div>
+                    <div class="kategorie">
+                        <input type="radio" name="kategorie" value="tablets"> Tablets
+                    </div>
+                    <div class="kategorie">
+                        <input type="radio" name="kategorie" value="anderes"> Anderes
+                    </div>
+
+                    <div>
+                        <button type="button" class="weiterButton" onclick="window.location.href='stores.html'">Weiter</button>
+                    </div>
+
+                    <script>
+                        function bestätigen() {
+                            var ausgewählteKategorie = document.querySelector('input[name="kategorie"]:checked');
+                            if (ausgewählteKategorie) {
+                                alert('Sie haben die Kategorie ' + ausgewählteKategorie.value + ' ausgewählt.');
+                            } else {
+                                alert('Bitte wählen Sie eine Kategorie aus.');
+                            }
+                        }
+                    </script>
+
+                    <img id="Zeigefinger" src="images/Geraeteauswahl_iPad.svg" alt="Zeigefinger">
+
+
+
+                    <script type="module" src="../../00_setup/supabase.js"></script>
+                    <script type="module" src="2_password.js"></script>
     </main>
 </body>
 

@@ -20,18 +20,15 @@
 
     <main>
         <div class="textMain">
-            <h1>Wähle dein <br> Gerät aus: </h1>
+            <h1>Wähle deine<br>Filiale aus: </h1>
             <t>Lorem ipsum dolor sit amet consectetur. Gravida a est ac erat nibh eget feugiat. <br>
                  Amet fermentum magnis ipsum turpis ut tempus. Tellus risus faucibus at vitae sagittis <br>
                  nunc et nunc. Lorem ipsum dolor sit amet consectetur. Gravida a est ac erat nibh eget feugiat.</t>
             <div>
-                
             
-            
-    
         </div>
 
-        <title>Elektrogeräteauswahl</title>
+        <title>Filiale-Auswahl</title>
     
     </head>
     <body>
@@ -53,9 +50,12 @@
             </div>
             <div class="kategorie">
                 <input type="radio" name="kategorie" value="anderes"> Anderes
-            </div> class="button"
-            <button onclick="bestätigen()">Bestätigen</button>
         </div>
+
+        <div>
+            <button type="button" class="bestätigenButton" onclick="window.location.href='konto.html'">Bestätigen</button>
+        </div>
+
         <script>
             function bestätigen() {
                 var ausgewählteKategorie = document.querySelector('input[name="kategorie"]:checked');
