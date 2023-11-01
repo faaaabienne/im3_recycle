@@ -39,29 +39,28 @@
             <h2>Meld dich an!</h2>
         </div>
 
-        <div id="auth">
-            <input type="email" id="email" placeholder="Email"><br>
-            <input type="password" id="password" placeholder="Passwort"><br>
-            <button onclick="login()">Anmelden</button><br>
-            <button onclick="register()">Registrieren</button>
-        </div>
+        <form id="registration-form">
+            <label for="username">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            <label for="password">Passwort:</label>
+            <input type="password" id="passwordInput" name="password" required><br><br>
+            <button id="loginButton">Login</button>
+            <button id="signUpButton">
+                <a href="signup.html" style="text-decoration: none; color: inherit;">Registrieren</a>
+            </button>
 
-        <div id="dashboard" hidden>
-            <h2>Welcome, <span id="userEmail"></span></h2>
-            <p>Deine Punkte: <span id="points">0</span></p>
-            <button onclick="addPoints()">Punkte hinzufügen</button>
-            <button onclick="logout()">Abmelden</button>
-        </div>
 
-        <script type="module" src="../../00_setup/supabase.js"></script>
-        <script type="module" src="2_password.js"></script>
+        </form>
+
+        <p id="message"></p>
+
+        <script type="module" src="scripts/signup.js"></script>
+        <script type="module" src="config/config.js"></script>
+
     </main>
 
     <footer>
     </footer>
-
-    <script src="scripts/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.29.0/dist/umd/supabase.min.js"></script>
 </body>
 
 </html>
