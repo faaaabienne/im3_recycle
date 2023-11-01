@@ -4,10 +4,27 @@ body {
     background-position: center;
 }
 
-@media screen and (min-width: 414px) {
-    body {
-        background-size: 100% auto;
-    }
+header {
+display: flex;
+justify-content: space-between;
+margin-right: 5vw;
+}
+
+.containerMain {
+    margin-left: 5vw;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.containerContent {
+    width: 50%;
+}
+
+.containerExtra {
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 #progress {
@@ -27,16 +44,13 @@ body {
 
 
 h1 {
-
     color: #000;
     font-family: Gabarito;
     font-size: 80px;
     font-weight: 900;
-
 }
 
 h2 {
-
     color: #000;
     font-family: Gabarito;
     font-size: 40px;
@@ -104,7 +118,6 @@ p {
     align-items: center;
     border-radius: 15px;
     border: none;
-
 }
 
 /* CSS für den Hover-Effekt */
@@ -114,37 +127,21 @@ p {
         /* Hintergrundfarbe des Buttons bei Hover */
 }
 
-header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
 #logo {
     width: 250px;
     height: 250px;
     margin-top: 30px;
 }
 
-/* Bild Pflanze mit Smile */ 
-.containerSmile img {
-    max-width: 50%;
-    /* Begrenzt die Breite des Bildes auf die Hälfte des Containers */
+/* Bild Pflanze mit Smile */
+.containerSmile {
+    align-items: end;
+    width: 100%;
     height: auto;
-    height: 530px;
-    display: flex;
-    justify-content: space-between;
-    /* Platziert die Elemente mit Abstand zwischen ihnen */
-    align-items: center;
-    width: 50%;
-    /* Breite auf 50% setzen, um die rechte Hälfte einzunehmen */
-    float: right;
 }
 
 /* Navigation links */
 .menu a {
-    float: left;
-    display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -156,6 +153,9 @@ header {
     line-height: normal;
 }
 
+.menu {
+    display: flex;
+}
 
 /* On hover, the links will change color */
 .menu a:hover {
@@ -163,6 +163,22 @@ header {
 }
 
 
-@media screen and (max-width: 390px) {
-    /* CSS-Regeln, die für Bildschirme mit mindestens 600 Pixel Breite gelten */
+@media screen and (max-width: 767px) {
+    body {
+        background: none;
+        background-color: rgba(135, 180, 106, 0.5);
+    }
+
+    .containerMain{
+        flex-direction: column;
+    }
+
+    .containerContent{
+        padding-top: 50%;
+        width: 100%;
+    }
+
+    .containerExtra{
+        width: 100%;
+    }
 }
