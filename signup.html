@@ -23,56 +23,52 @@
             <div class="menu">
                 <a href="#about">Über Uns</a>
             </div>
-            </div>
-        </header>
+    </div>
+    </header>
 
-        <main>
-            <h1>Sign Up</h1>
+    <main>
+        <h1>Sign Up</h1>
 
-            <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et
-                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet,
-                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                no
-                sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no
+            sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
-            <h2>Meld dich an!</h2>
+        <h2>Meld dich an!</h2>
 
 
-            <h2>Registrierung</h2>
-            <form id="registration-form">
-                <label for="username">Benutzername:</label>
-                <input type="text" id="username" name="username" required><br><br>
-            
-                <label for="password">Passwort:</label>
-                <input type="password" id="password" name="password" required><br><br>
-    
-                 <button type="submit">Registrieren</button>
-            </form>
-    
+        <h2>Registrierung</h2>
+        <form id="registration-form">
+            <label for="username">Nachname:</label>
+            <input type="text" id="nachname" name="nachname" required><br><br>
+            <label for="username">Vorname:</label>
+            <input type="text" id="vorname" name="vorname" required><br><br>
+            <label for="username">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+
+            <label for="password">Passwort:</label>
+            <input type="password" id="passwordInput" name="password" required><br><br>
+
+            <button id="signUpButton">Registrieren</button>
+
+        </form>
+
         <p id="message"></p>
-    
-        <script src="signup.js"></script>
-    
 
+        <script type="module" src="scripts/signup.js"></script>
+        <script type="module" src="config/config.js"></script>
 
-            <!-- <input type="email" id="emailInput" placeholder="Name" /> <br></br>
-            <input type="password" id="passwordInput" placeholder="Passwort" /> <br></br>
-            <button id="loginButton">Login</button>
-            <p> Noch kein Konto? </p>
-            <button id="signUpButton">Sign Up</button> -->
+    </main>
 
-            <script type="module" src="../../00_setup/supabase.js"></script>
-            <script type="module" src="2_password.js"></script>
-        </main>
-
-        <footer>
-        </footer>
+    <footer>
+    </footer>
 </body>
 
 </html>

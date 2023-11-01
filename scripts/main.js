@@ -1,8 +1,5 @@
 import { supa } from "../config/config.js";
 
-const supabaseUrl = 'https://sdbjufroocuobdtvassq.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNkYmp1ZnJvb2N1b2JkdHZhc3NxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzMzY3MzIsImV4cCI6MjAxMTkxMjczMn0.iLluyCY0Q3IrvYmAr_eYOwwbGCUr5rYwbcpnvbW62AA';
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 async function login() {
     const email = document.getElementById('email').value;
