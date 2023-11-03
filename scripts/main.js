@@ -14,6 +14,7 @@ async function login() {
         window.location.href = "devices.html";
     } else {
         console.log("Logged in as ", email);
+        window.location.href = '/devices.html';
     }
 }
 // Login Button
