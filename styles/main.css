@@ -4,12 +4,28 @@ body {
     background-position: center;
 }
 
-@media screen and (min-width: 414px) {
-    body {
-        background-size: 100% auto;
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5vw;
 }
 
+.containerMain {
+    margin-left: 5vw;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.containerContent {
+    width: 50%;
+}
+
+.containerExtra {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
 
 #progress {
     width: 360px;
@@ -18,10 +34,6 @@ body {
     border-radius: 50px;
     border: 3px solid var(--Bright-Green-medium, #87B46A);
     background: #87B46A;
-}
-
-.textMain {
-    padding-left: 60px;
 }
 
 
@@ -48,10 +60,10 @@ p {
     font-family: Raleway;
     font-size: 25px;
     font-weight: 500;
-    max-width: 50%;
+    max-width: 75%;
 }
 
-/* Ladebalken */ 
+/* Ladebalken */
 
 .punktestand {
     width: 200px;
@@ -88,7 +100,7 @@ header {
 #logo {
     width: 250px;
     height: 250px;
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
 /* Navigation links */
@@ -125,6 +137,22 @@ header {
     float: right;
 }
 
-@media screen and (max-width: 390px) {
-    /* CSS-Regeln, die für Bildschirme mit mindestens 600 Pixel Breite gelten */
+@media screen and (max-width: 767px) {
+    body {
+        background: none;
+        background-color: rgba(135, 180, 106, 0.5);
+    }
+
+    .containerMain {
+        flex-direction: column;
+    }
+
+    .containerContent {
+        padding-top: 80%;
+        width: 100%;
+    }
+
+    .containerExtra {
+        width: 100%;
+    }
 }

@@ -1,7 +1,31 @@
 body {
-    background: linear-gradient(to right, rgb(135, 180, 106, 0.5) 60%, transparent 50%);
+    background: linear-gradient(to right, rgba(135, 180, 106, 0.5) 50%, transparent 50%);
+    background-size: cover;
+    background-position: center;
 }
 
+header {
+display: flex;
+justify-content: space-between;
+margin-right: 5vw;
+}
+
+.containerMain {
+    margin-left: 5vw;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.containerContent {
+    width: 50%;
+}
+
+.containerExtra {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
 
 #progress {
     width: 360px;
@@ -11,11 +35,6 @@ body {
     border: 3px solid var(--Bright-Green-medium, #87B46A);
     background: #87B46A;
 }
-
-.textMain {
-    padding-left: 60px;
-}
-
 
 h1 {
     width: 675px;
@@ -67,9 +86,7 @@ p {
     color: #000;
     font-family: Raleway;
     font-size: 25px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
 
 .weiterButton {
@@ -109,39 +126,8 @@ p {
     line-height: normal;
 } */
 
-.punktestand {
-    width: 200px;
-    /* Breite der Fortschrittsleiste */
-    height: 20px;
-    /* Höhe der Fortschrittsleiste */
-    border: 1px solid #87B46A;
-    /* Rahmen um die Fortschrittsleiste */
-    background-color: #87B46A;
-    /* Hintergrundfarbe der Fortschrittsleiste */
-    border-radius: 15px;
-    width: 441px;
-    height: 48px;
-    flex-shrink: 0;
-    margin-top: 100px;
-
-}
-
-.fortschritt {
-    height: 100%;
-    width: 0;
-    background-color: #37492B;
-    /* Farbe des Fortschrittsbalkens */
-}
-
-
 @media screen and (min-width: 1084px) {
     /* CSS-Regeln, die für Bildschirme mit mindestens 600 Pixel Breite gelten */
-}
-
-header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
 }
 
 #logo {
@@ -149,29 +135,27 @@ header {
     height: 100px;
 }
 
-.menu {
-    justify-self: end;
-    overflow: hidden;
-    background-color: #333;
-    display: flex;
-    flex-direction: row;
-}
-
-/* Navigation links */
 .menu a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    color: #000;
+    font-family: Gabarito;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.menu {
+    display: flex;
 }
 
 /* On hover, the links will change color */
 .menu a:hover {
-    background-color: #ddd;
-    color: black;
+    color: #87B46A;
 }
+
 
 
 .auswahl-container {
@@ -179,13 +163,11 @@ header {
     flex-direction: column;
 }
 .kategorie {
-    margin: 10px 50vw 0px 0px;
     padding: 40px; 
     border: 2px solid #83C459; 
     border-radius: 15px; 
     cursor: pointer;
     transition: background-color4r 0.3s; 
-    padding: 2%;
 }
 .kategorie:hover {
     background-color:#83C459; 

@@ -102,8 +102,7 @@ p {
 
 /* Button stylen */
 
-.neuenArtikelButton,
-.meinKontoButton {
+.neuenArtikelButton {
     width: 189px;
     height: 52px;
     flex-shrink: 0;
@@ -121,8 +120,7 @@ p {
 }
 
 /* CSS für den Hover-Effekt */
-.neuenArtikelButton:hover,
-.meinKontoButton:hover {
+.neuenArtikelButton:hover {
     background-color: #87B46A
         /* Hintergrundfarbe des Buttons bei Hover */
 }
