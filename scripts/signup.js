@@ -8,13 +8,13 @@ async function signUp() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('passwordInput').value;
 
-    const { error } = await supa.auth.signUp({ email, password, vorname, nachname });
+    const { error } = await supa.auth.signUp({ email, password, vorname, nachname }).select();
 
     if (error) {
-        console.error("Error during sign up: ", error.message);
-        window.location.href = "devices.html";
+        console.error("Error during sign up: ", error.message, error);
     } else {
-        console.log("Signed up as ", email);
+        console.log("Signed up as ", email, error);
+        window.location.href = "devices.html";
     }
 }
 

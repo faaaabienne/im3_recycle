@@ -1,20 +1,29 @@
 import { supa } from "../config/config.js";
 
 
-const kategorie = document.querySelector('#kategorie');
-btn.addEventListener('click', insertInput);
+const weiterButton = document.querySelector('#weiterButton');
+weiterButton.addEventListener('click', insertInput);
 
 
 async function insertInput() {
-  const input = document.querySelector ('#first_name');
-
-  const { data: actors, error } = await supa.from("category").insert([
+  const input = document.querySelector('input[name="kategorie"]:checked').value;
+  console.log('input', '<' + input + '>');
+  /* const { data: actors, error } = await supa.from("category").insert([
     {
       'user_id': 'input.value',
       'category_id': 'kategorie.value'
     }
-  ]);
-  return actors;
-}
+  ]); */
 
+
+  const { data, error } = await supa
+    .from('Categories')
+    .select()
+    .eq('category_name', input)
+
+  console.log(data, error);
+
+  let currentUser= getSession().session.user;
+  console.log(currentUser)
+}
 

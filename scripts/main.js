@@ -8,7 +8,8 @@ async function login() {
     const password = document.getElementById('passwordInput').value;
 
     const { error } = await supa.auth.signIn({ email, password });
-
+    
+    console.log(await supabase.auth.getUser());
     if (error) {
         console.error("Error during login: ", error.message);
         window.location.href = "devices.html";
@@ -18,6 +19,6 @@ async function login() {
     }
 }
 // Login Button
-const loginButton= document.getElementById('loginButton');
-loginButton.addEventListener('click',login);
+const loginButton = document.getElementById('loginButton');
+loginButton.addEventListener('click', login);
 
