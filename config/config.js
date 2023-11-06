@@ -8,6 +8,6 @@ const supa = supabase.createClient(supabaseUrl, supabaseKey, {
         redirectTo: window.location.origin,  // This will redirect back to the page where the request originated from
     },
 });
-
+console.log('supa', supa);
 export { supa }
 

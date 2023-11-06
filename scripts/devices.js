@@ -23,7 +23,7 @@ async function insertInput() {
 
   console.log(data, error);
 
-  let currentUser= getSession().session.user;
+  const currentUser= supa.auth.user()
   console.log(currentUser)
 }
 

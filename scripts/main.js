@@ -2,16 +2,16 @@ import { supa } from "../config/config.js";
 
 // Login wird aufgerufen
 async function login() {
-    event.preventDefault();
+    // event.preventDefault();
     console.log('Login wurde aufgerufen');
     const email = document.getElementById('email').value;
     const password = document.getElementById('passwordInput').value;
 
-    const { error } = await supa.auth.signIn({ email, password });
-    
-    console.log(await supabase.auth.getUser());
-    if (error) {
-        console.error("Error during login: ", error.message);
+    const { response } = await supa.auth.signIn({ email, password });
+
+    console.log(response);
+    if (response) {
+        console.error("Error during login: ", response.message);
         window.location.href = "devices.html";
     } else {
         console.log("Logged in as ", email);

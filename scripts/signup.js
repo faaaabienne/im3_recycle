@@ -3,20 +3,22 @@ import { supa } from "../config/config.js";
 async function signUp() {
     event.preventDefault();
     console.log('Signup wurde aufgerufen');
-    const nachname = document.getElementById('nachname').value;
-    const vorname = document.getElementById('vorname').value;
+    const last_name = document.getElementById('nachname').value;
+    const first_name = document.getElementById('vorname').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('passwordInput').value;
 
-    const { error } = await supa.auth.signUp({ email, password, vorname, nachname }).select();
+    let signUpInfo = { email: email, password: password, first_name: first_name, last_name: last_name };
+    console.log(signUpInfo);
+    const { error } = await supa.auth.signUp(signUpInfo);
 
     if (error) {
         console.error("Error during sign up: ", error.message, error);
     } else {
         console.log("Signed up as ", email, error);
-        window.location.href = "devices.html";
+        window.location.href = "/devices.html";
     }
 }
 
-const signUpButton= document.getElementById('signUpButton');
-signUpButton.addEventListener('click',signUp);
+const signUpButton = document.getElementById('signUpButton');
+signUpButton.addEventListener('click', signUp);
