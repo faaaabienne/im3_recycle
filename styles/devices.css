@@ -89,6 +89,7 @@ h4 {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    max-width: 75%;
 }
 
 .kategorie {
@@ -241,5 +242,39 @@ h4 {
     background-color: blue; /* Hintergrundfarbe */
     border-radius: 10px; /* Radius der abgerundeten Ecken (10px für ein Quadrat) */
     cursor: pointer; /* Ändert den Mauszeiger, um zu zeigen, dass das Element anklickbar ist */
-
 }
+
+/* CSS-Regel für den Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 140px;
+    background: var(--Orange-light, #E1A077);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer a {
+    width: 164px;
+    height: 30px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Gabarito;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.footer-hidden {
+    display: none;
+  }

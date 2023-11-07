@@ -26,4 +26,17 @@ async function insertInput() {
   const currentUser= supa.auth.user()
   console.log(currentUser)
 }
+// JavaScript-Code, um den Footer anzuzeigen, wenn der Benutzer ans Ende der Seite scrollt
+window.addEventListener('scroll', function() {
+  var footer = document.querySelector('footer');
+  var windowHeight = window.innerHeight;
+  var bodyHeight = document.body.offsetHeight;
+  var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
 
+  // Überprüfen, ob der Benutzer ganz unten auf der Seite ist
+  if (scrollPosition + windowHeight >= bodyHeight) {
+    footer.classList.remove('footer-hidden'); // Footer anzeigen
+  } else {
+    footer.classList.add('footer-hidden'); // Footer ausblenden
+  }
+});

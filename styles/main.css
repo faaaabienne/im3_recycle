@@ -243,7 +243,6 @@ header {
     bottom: 0;
     right: 0;
   }
-  
 
 
 @media screen and (max-width: 767px) {
@@ -280,8 +279,7 @@ footer {
     align-items: center;
 }
 
-
-footer p {
+footer a {
     width: 164px;
     height: 30px;
     flex-shrink: 0;
@@ -291,4 +289,18 @@ footer p {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-decoration: none;
 }
+
+footer a:hover {
+    color: white;
+}
+
+.footer-hidden {
+    display: none;
+  }
+  
+
+
+
+  
