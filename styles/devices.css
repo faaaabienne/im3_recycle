@@ -82,11 +82,47 @@ h4 {
     right: 20px;
 }
 
-p {
+.containerContent p {
     color: #000;
     font-family: Raleway;
     font-size: 25px;
+    font-style: normal;
     font-weight: 500;
+    line-height: normal;
+}
+
+.kategorie {
+    border-radius: 15px;
+    border: 3px solid var(--Bright-Green-medium, #87B46A);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    
+    width: 416.893px;
+    height: 40.357px;
+    flex-shrink: 0;
+
+    color: #000;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.kategorie input[type="radio"] {
+    margin-right: 10px;
+    /* Füge hier deine gewünschten Stile für die Radio-Buttons hinzu */
+    width: 20px; /* Beispiel: Breite der Radio-Buttons */
+    height: 20px; /* Beispiel: Höhe der Radio-Buttons */
+    border: 2px solid #87B46A;
+    border-radius: 90%;
+    background-color: #87B46A;
+}
+
+.kategorie input[type="radio"] {
+    margin-right: 10px;
 }
 
 .weiterButton {
@@ -95,8 +131,9 @@ p {
     flex-shrink: 0;
     color: #000;
     font-family: Raleway;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
     margin: 50px 10px;
     margin-top: 50px;
     display: inline-block;
@@ -104,6 +141,8 @@ p {
     align-items: center;
     border-radius: 15px;
     border: none;
+    color: #000;
+    line-height: normal;
 }
 
 /* CSS für den Hover-Effekt */
@@ -130,11 +169,7 @@ p {
     /* CSS-Regeln, die für Bildschirme mit mindestens 600 Pixel Breite gelten */
 }
 
-#logo {
-    width: 100px;
-    height: 100px;
-}
-
+/* Navigation links */
 .menu a {
     text-align: center;
     padding: 14px 16px;
@@ -156,7 +191,25 @@ p {
     color: #87B46A;
 }
 
+#logo {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+}
 
+.containerSmile img {
+    max-width: 50%;
+    /* Begrenzt die Breite des Bildes auf die Hälfte des Containers */
+    height: auto;
+    height: 530px;
+    display: flex;
+    justify-content: space-between;
+    /* Platziert die Elemente mit Abstand zwischen ihnen */
+    align-items: center;
+    width: 50%;
+    /* Breite auf 50% setzen, um die rechte Hälfte einzunehmen */
+    float: right;
+}
 
 .auswahl-container {
     display: flex;

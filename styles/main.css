@@ -17,6 +17,15 @@ header {
     height: 100vh;
 }
 
+.containerContent p {
+    color: #000;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 .containerContent {
     width: 50%;
 }
@@ -36,6 +45,89 @@ header {
     background: #87B46A;
 }
 
+/* styles.css */
+label {
+    color: #000;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 360px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 3px solid var(--Bright-Green-medium, #87B46A);
+    background-color: transparent;
+}
+
+
+/* Ändere die Fonteinstellungen für den eingegebenen Text im Inputfeld */
+#email,
+#passwordInput {
+    color: #000;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+#loginButton {
+    width: 189px;
+    height: 52px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    margin: 50px 10px;
+    margin-top: 50px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    color: #000;
+    line-height: normal;
+}
+
+#signUpButton {
+    width: 189px;
+    height: 52px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Raleway;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 400;
+    margin: 50px 10px;
+    margin-top: 50px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    color: #000;
+    line-height: normal;
+}
+
+
+/* CSS für den Hover-Effekt */
+#signUpButton:hover {
+    background-color: #87B46A
+}
+
+#loginButton:hover {
+    background-color: #87B46A
+}
+        /* Hintergrundfarbe des Buttons bei Hover */
 
 h1 {
 
@@ -47,12 +139,12 @@ h1 {
 }
 
 h2 {
-
     color: #000;
     font-family: Gabarito;
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 50px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
 }
 
 p {
@@ -136,6 +228,7 @@ header {
     /* Breite auf 50% setzen, um die rechte Hälfte einzunehmen */
     float: right;
 }
+
 
 @media screen and (max-width: 767px) {
     body {
