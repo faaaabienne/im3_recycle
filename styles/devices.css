@@ -197,19 +197,23 @@ h4 {
     margin-top: 30px;
 }
 
-.containerSmile img {
-    max-width: 50%;
-    /* Begrenzt die Breite des Bildes auf die Hälfte des Containers */
-    height: auto;
-    height: 530px;
-    display: flex;
-    justify-content: space-between;
-    /* Platziert die Elemente mit Abstand zwischen ihnen */
-    align-items: center;
-    width: 50%;
-    /* Breite auf 50% setzen, um die rechte Hälfte einzunehmen */
-    float: right;
-}
+.containerExtra {
+    position: relative;
+    width: 50%; /* 50% der Breite des Elternelements */
+    height: auto; /* Automatische Anpassung der Höhe, um das Seitenverhältnis des Bildes zu erhalten */
+  }
+  
+  .containerSmile img {
+    max-width: 100%; /* Das Bild wird maximal 100% der Breite des containerSmile einnehmen */
+    max-height: 100%; /* Das Bild wird maximal 100% der Höhe des containerSmile einnehmen */
+  }
+  
+  .containerSmile {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
 
 .auswahl-container {
     display: flex;
