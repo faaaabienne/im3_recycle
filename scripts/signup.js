@@ -16,9 +16,22 @@ async function signUp() {
         console.error("Error during sign up: ", error.message, error);
     } else {
         console.log("Signed up as ", email, error);
-        window.location.href = "/devices.html";
+        upsertUser(email, first_name, last_name);
+        // window.location.href = "/devices.html";
     }
 }
 
 const signUpButton = document.getElementById('signUpButton');
 signUpButton.addEventListener('click', signUp);
+
+
+async function upsertUser(email, firstname, lastname) {
+    const { data, error } = await supa
+        .from('User')
+        .upsert({ email: email, first_name: firstname, last_name: lastname }, { onConflict: 'email' });
+    if (error) {
+        console.error('Error updating or inserting user:', error);
+    } else {
+        console.log('User updated or inserted successfully:', data);
+    }
+}

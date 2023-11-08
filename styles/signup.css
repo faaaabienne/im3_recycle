@@ -258,6 +258,7 @@ header {
 
     .containerMain {
         flex-direction: column;
+        padding-top: 30%;
     }
 
     .containerContent {
@@ -267,5 +268,6 @@ header {
 
     .containerExtra {
         width: 100%;
+        padding-top: 85%;
     }
 }

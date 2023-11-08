@@ -1,28 +1,33 @@
 import { supa } from "../config/config.js";
 
-calculatePunktzahl();
+var currentUser = supa.auth.user()
+console.log(currentUser.id)
 
-async function calculatePunktzahl() {
-  let currentUserId = 4; // TODO: mit Dozent eingeloggter User Daten holen
-  const { userHasCategoryData, uHCError } = await supa
+async function fetchPoints() {
+  const { data: userCategories, error: userCategoriesError } = await supa
     .from('User_has_category')
-    .select()
-    .eq('user_id', currentUserId);
+    .select('category_id')
+    .eq('user_id', currentUser.id);
 
-// TODO: Dozent, Idee Listen von Werten mit category_id drin sind (user_has_category tabelle)
-// über diese category_ids müssen wir von Categories Tabelle Punktzahl holen und zusammenzählen
+  if (userCategoriesError) {
+    console.error(userCategoriesError);
+    return;
+  }
 
-  const sum = userHasCategoryData.reduce( (accumulator, object) => {
-    const { categoryData, cError } = supa
+  const categoryIds = userCategories.map(category => category.category_id);
+
+  const { data: categories, error: categoriesError } = await supa
     .from('Categories')
     .select('category_points')
-    .eq('category_id', object.category_id);
-    return accumulator + categoryData.category_points;
-  }, 0);
+    .in('id', categoryIds);
 
-  console.log(userHasCategoryData, uHCError);
-  console.log(sum);
-  const currentUser = supa.auth.user()
-  console.log(currentUser)
+  if (categoriesError) {
+    console.error(categoriesError);
+    return;
+  }
+
+  const totalPoints = categories.reduce((acc, category) => acc + category.category_points, 0);
+  console.log('Total Points:', totalPoints);
 }
 
+fetchPoints();
