@@ -18,9 +18,6 @@ async function login() {
         window.location.href = '/devices.html';
     }
 }
-// Login Button
-const loginButton = document.getElementById('loginButton');
-loginButton.addEventListener('click', login);
 
 // JavaScript-Code, um den Footer anzuzeigen, wenn der Benutzer ans Ende der Seite scrollt
 window.addEventListener('scroll', function() {

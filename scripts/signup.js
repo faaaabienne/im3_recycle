@@ -16,7 +16,8 @@ async function signUp() {
         console.error("Error during sign up: ", error.message, error);
     } else {
         console.log("Signed up as ", email, error);
-        window.location.href = "/devices.html";
+        upsertUser(email, first_name, last_name);
+        // window.location.href = "/devices.html";
     }
 }
 
