@@ -251,16 +251,16 @@ header {
         background-color: rgba(135, 180, 106, 0.5);
     }
 
-    .containerMain {
+    .containerMain{
         flex-direction: column;
     }
 
-    .containerContent {
-        padding-top: 80%;
+    .containerContent{
+        padding-top: 50%;
         width: 100%;
     }
 
-    .containerExtra {
+    .containerExtra{
         width: 100%;
     }
 }
@@ -300,7 +300,6 @@ footer a:hover {
     display: none;
   }
   
-
 
 
   
