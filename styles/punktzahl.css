@@ -5,9 +5,9 @@ body {
 }
 
 header {
-display: flex;
-justify-content: space-between;
-margin-right: 5vw;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5vw;
 }
 
 .containerMain {
@@ -35,6 +35,25 @@ margin-right: 5vw;
     border: 3px solid var(--Bright-Green-medium, #87B46A);
     background: #87B46A;
 }
+
+/* Ladebalken */
+.punktestand {
+    width: 100%;
+    height: 20px;
+    border: 1px solid #87B46A;
+    background-color: #87B46A;
+    border-radius: 15px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.fortschritt {
+    height: 100%;
+    width: var(--progressWidth, 0);
+    background-color: #37492B;
+    transition: width 0.5s ease;
+}
+
 
 
 .inhaltMain {
@@ -193,6 +212,8 @@ p {
     /* Farbe des Fortschrittsbalkens */
 }
 
+
+
 /* Button stylen */
 
 .neuenArtikelButton {
@@ -224,8 +245,7 @@ p {
     font-size: 25px;
     font-style: italic;
     font-weight: 400;
-    margin: 50px 10px;
-    margin-top: 50px;
+    margin: 10px;
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -235,29 +255,11 @@ p {
     line-height: normal;
 }
 
-.newButton {
-    width: 286px;
-    height: 52px;
-    flex-shrink: 0;
-    color: #000;
-    font-family: Raleway;
-    font-size: 25px;
-    font-style: italic;
-    font-weight: 400;
-    margin: 50px 10px;
-    margin-top: 50px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    border: none;
-    color: #000;
-    line-height: normal;
-}
 
 .logOut:hover {
     background-color: #87B46A
 }
+
 /* CSS für den Hover-Effekt */
 .neuenArtikelButton:hover {
     background-color: #87B46A
@@ -306,56 +308,24 @@ p {
         background-color: rgba(135, 180, 106, 0.5);
     }
 
-    .containerMain{
+    .containerMain {
         flex-direction: column;
     }
 
-    .containerContent{
-        padding-top: 50%;
+    .containerContent {
+        padding-top: 60%;
         width: 100%;
     }
 
-    .containerExtra{
-        width: 100%;
+    .containerExtra {
+        width: 70%;
+    }
+
+    .logOut {
+        order: 1;
+    }
+
+    .neuenArtikelButton {
+        order: 2;
     }
 }
-
-/* CSS-Regel für den Footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 140px;
-    background: var(--Orange-light, #E1A077);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-footer a {
-    width: 164px;
-    height: 30px;
-    flex-shrink: 0;
-    color: #000;
-    font-family: Gabarito;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: white;
-}
-
-
-.footer-hidden {
-    display: none;
-  }
-
-
-
-  

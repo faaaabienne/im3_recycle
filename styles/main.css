@@ -99,8 +99,8 @@ input[type="password"] {
     font-size: 25px;
     font-style: italic;
     font-weight: 400;
-    margin: 50px 10px;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -119,8 +119,7 @@ input[type="password"] {
     font-size: 25px;
     font-style: italic;
     font-weight: 400;
-    margin: 50px 10px;
-    margin-top: 50px;
+    margin-top: 20px;
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -139,7 +138,8 @@ input[type="password"] {
 #loginButton:hover {
     background-color: #87B46A
 }
-        /* Hintergrundfarbe des Buttons bei Hover */
+
+/* Hintergrundfarbe des Buttons bei Hover */
 
 h1 {
 
@@ -169,31 +169,6 @@ p {
 
 /* Ladebalken */
 
-.punktestand {
-    width: 200px;
-    /* Breite der Fortschrittsleiste */
-    height: 20px;
-    /* Höhe der Fortschrittsleiste */
-    border: 1px solid #87B46A;
-    /* Rahmen um die Fortschrittsleiste */
-    background-color: #87B46A;
-    /* Hintergrundfarbe der Fortschrittsleiste */
-    border-radius: 15px;
-    width: 441px;
-    height: 48px;
-    flex-shrink: 0;
-    margin-top: 50px;
-    margin-left: 60px;
-    display: flex;
-
-}
-
-.fortschritt {
-    height: 100%;
-    width: 0;
-    background-color: #37492B;
-    /* Farbe des Fortschrittsbalkens */
-}
 
 header {
     display: flex;
@@ -229,21 +204,24 @@ header {
 
 .containerExtra {
     position: relative;
-    width: 50%; /* 50% der Breite des Elternelements */
-    height: auto; /* Automatische Anpassung der Höhe, um das Seitenverhältnis des Bildes zu erhalten */
-  }
-  
-  .containerSmile img {
-    max-width: 100%; /* Das Bild wird maximal 100% der Breite des containerSmile einnehmen */
-    max-height: 100%; /* Das Bild wird maximal 100% der Höhe des containerSmile einnehmen */
-  }
-  
-  .containerSmile {
+    width: 50%;
+    /* 50% der Breite des Elternelements */
+    height: auto;
+    /* Automatische Anpassung der Höhe, um das Seitenverhältnis des Bildes zu erhalten */
+}
+
+.containerSmile img {
+    max-width: 100%;
+    /* Das Bild wird maximal 100% der Breite des containerSmile einnehmen */
+    max-height: 100%;
+    /* Das Bild wird maximal 100% der Höhe des containerSmile einnehmen */
+}
+
+.containerSmile {
     position: absolute;
     bottom: 0;
     right: 0;
-  }
-
+}
 
 @media screen and (max-width: 767px) {
     body {
@@ -251,55 +229,25 @@ header {
         background-color: rgba(135, 180, 106, 0.5);
     }
 
-    .containerMain{
+    .containerMain {
         flex-direction: column;
+        padding-top: 60%;
     }
 
-    .containerContent{
+    .containerContent {
         padding-top: 50%;
         width: 100%;
     }
 
-    .containerExtra{
-        width: 100%;
+    .containerExtra {
+        width: 70%;
+        padding-top: 75%;
     }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 250px;
+    }
+
+
 }
-
-/* CSS-Regel für den Footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 140px;
-    background: var(--Orange-light, #E1A077);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-footer a {
-    width: 164px;
-    height: 30px;
-    flex-shrink: 0;
-    color: #000;
-    font-family: Gabarito;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: white;
-}
-
-.footer-hidden {
-    display: none;
-  }
-  
-
-
-  

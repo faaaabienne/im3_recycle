@@ -27,14 +27,6 @@ header {
     justify-content: center;
 }
 
-#progress {
-    width: 360px;
-    height: 53px;
-    flex-shrink: 0;
-    border-radius: 50px;
-    border: 3px solid var(--Bright-Green-medium, #87B46A);
-    background: #87B46A;
-}
 
 /* styles.css */
 label {
@@ -173,31 +165,6 @@ h2 {
 
 /* Ladebalken */
 
-.punktestand {
-    width: 200px;
-    /* Breite der Fortschrittsleiste */
-    height: 20px;
-    /* Höhe der Fortschrittsleiste */
-    border: 1px solid #87B46A;
-    /* Rahmen um die Fortschrittsleiste */
-    background-color: #87B46A;
-    /* Hintergrundfarbe der Fortschrittsleiste */
-    border-radius: 15px;
-    width: 441px;
-    height: 48px;
-    flex-shrink: 0;
-    margin-top: 50px;
-    margin-left: 60px;
-    display: flex;
-
-}
-
-.fortschritt {
-    height: 100%;
-    width: 0;
-    background-color: #37492B;
-    /* Farbe des Fortschrittsbalkens */
-}
 
 header {
     display: flex;
@@ -248,7 +215,9 @@ header {
         right: 0;
       }
 
-@media screen and (max-width: 767px) {
+
+  
+  @media screen and (max-width: 767px) {
     body {
         background: none;
         background-color: rgba(135, 180, 106, 0.5);
@@ -256,7 +225,7 @@ header {
 
     .containerMain {
         flex-direction: column;
-        padding-top: 30%;
+        padding-top: 90%;
     }
 
     .containerContent {
@@ -268,40 +237,20 @@ header {
         width: 100%;
         padding-top: 85%;
     }
-}
 
-/* CSS-Regel für den Footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 140px;
-    background: var(--Orange-light, #E1A077);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+    #vorname {
+        width: 330px
+    }
 
-footer a {
-    width: 164px;
-    height: 30px;
-    flex-shrink: 0;
-    color: #000;
-    font-family: Gabarito;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-decoration: none;
-}
+    #nachname {
+        width: 330px
+    }
 
-footer a:hover {
-    color: white;
-}
+    #email {
+        width: 330px
+    }
 
-.footer-hidden {
-    display: none;
-  }
-  
+    #passwordInput {
+        width: 330px
+    }
+}

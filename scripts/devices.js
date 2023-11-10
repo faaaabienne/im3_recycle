@@ -30,6 +30,8 @@ async function insertInput() {
 
   console.log(insertedData, insertError);
 }
+
+
 // JavaScript-Code, um den Footer allmählich anzuzeigen, wenn der Benutzer ans Ende der Seite scrollt
 var footer = document.querySelector('footer');
 var footerHidden = true; // Um zu verfolgen, ob der Footer gerade angezeigt oder ausgeblendet ist

@@ -1,58 +1,87 @@
 import { supa } from "../config/config.js";
 
-// Login wird aufgerufen
+// Function to upsert user data into the "User" table
+async function upsertUser(email, users_id) {
+    console.log('Upserting user data:', email, users_id);
+
+    const { data, error } = await supa
+        .from('User')
+        .upsert([
+            {
+                email: email,
+                users_id: users_id,
+            }
+        ], { onConflict: ['email'] }); // Specify the conflict resolution strategy (use the email as the conflict key)
+
+    if (error) {
+        console.error("Error during upsert into User table: ", error.message, error);
+    } else {
+        console.log("Data inserted into User table: ", data);
+    }
+}
+
+// Function to handle user login
 async function login() {
-    // event.preventDefault();
+    event.preventDefault();
     console.log('Login wurde aufgerufen');
     const email = document.getElementById('email').value;
     const password = document.getElementById('passwordInput').value;
 
-    const { response } = await supa.auth.signIn({ email, password });
+    try {
+        const { user, error } = await supa.auth.signIn({ email, password });
 
-    console.log(response);
-    if (response) {
-        console.error("Error during login: ", response.message);
-        window.location.href = "devices.html";
-    } else {
-        console.log("Logged in as ", email);
-        window.location.href = '/devices.html';
+        if (error) {
+            console.error("Error during login: ", error.message);
+            // Display an error message or handle it in your UIxc
+        } else {
+            console.log("Logged in as ", email);
+
+            // Wait for upsertUser to complete before moving to the next step
+            await upsertUser(email, user.id);
+
+            // Navigate to "devices.html" upon successful login
+            window.location.href = "/devices.html";
+        }
+    } catch (error) {
+        console.error("Error during login: ", error.message);
+        // Handle login error
     }
 }
 
+// Event listener for the login button
+const loginButton = document.getElementById('loginButton');
+loginButton.addEventListener('click', login);
 
-// JavaScript-Code, um den Footer allmählich anzuzeigen, wenn der Benutzer ans Ende der Seite scrollt
+// JavaScript code to gradually show the footer when the user scrolls to the end of the page
 var footer = document.querySelector('footer');
-var footerHidden = true; // Um zu verfolgen, ob der Footer gerade angezeigt oder ausgeblendet ist
+var footerHidden = true;
 
 window.addEventListener('scroll', function() {
-  var windowHeight = window.innerHeight;
-  var bodyHeight = document.body.offsetHeight;
-  var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-  var scrollTrigger = bodyHeight - windowHeight; // Trigger-Punkt, wenn der Footer allmählich angezeigt/ausgeblendet werden soll
+    var windowHeight = window.innerHeight;
+    var bodyHeight = document.body.offsetHeight;
+    var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+    var scrollTrigger = bodyHeight - windowHeight;
 
-  // Überprüfen, ob der Benutzer nahe genug am Ende der Seite ist
-  if (scrollPosition >= scrollTrigger && footerHidden) {
-    // Den Footer allmählich einblenden
-    footerHidden = false;
-    footer.style.opacity = '0'; // Startwert der Opazität auf 0 setzen
-    footer.classList.remove('footer-hidden');
-    requestAnimationFrame(function() {
-      footer.style.transition = 'opacity 0.5s'; // CSS-Übergang hinzufügen
-      footer.style.opacity = '1'; // Die Opazität auf 1 erhöhen, um den Footer anzuzeigen
-    });
-  } else if (scrollPosition < scrollTrigger && !footerHidden) {
-    // Den Footer allmählich ausblenden
-    footerHidden = true;
-    footer.style.opacity = '1'; // Startwert der Opazität auf 1 setzen
-    requestAnimationFrame(function() {
-      footer.style.transition = 'opacity 0.5s'; // CSS-Übergang hinzufügen
-      footer.style.opacity = '0'; // Die Opazität auf 0 verringern, um den Footer auszublenden
-      footer.addEventListener('transitionend', function() {
-        if (footerHidden) {
-          footer.classList.add('footer-hidden'); // Den Footer ausblenden, nachdem der Übergang abgeschlossen ist
-          footer.style.transition = ''; // Übergang entfernen, um für das Einblenden vorzubereiten
-        }
-      }, { once: true });
-    });
-  }
+    if (scrollPosition >= scrollTrigger && footerHidden) {
+        footerHidden = false;
+        footer.style.opacity = '0';
+        footer.classList.remove('footer-hidden');
+        requestAnimationFrame(function() {
+            footer.style.transition = 'opacity 0.5s';
+            footer.style.opacity = '1';
+        });
+    } else if (scrollPosition < scrollTrigger && !footerHidden) {
+        footerHidden = true;
+        footer.style.opacity = '1';
+        requestAnimationFrame(function() {
+            footer.style.transition = 'opacity 0.5s';
+            footer.style.opacity = '0';
+            footer.addEventListener('transitionend', function() {
+                if (footerHidden) {
+                    footer.classList.add('footer-hidden');
+                    footer.style.transition = '';
+                }
+            }, { once: true });
+        });
+    }
 });
