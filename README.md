@@ -1,4 +1,4 @@
-Kurzreflexion
+# Kurzreflexion
 
 In Bezug auf die positiven Aspekte unseres Projekts können wir sagen, dass die Kommunikation im Team gut funktioniert hat. Wir haben effektiv Ideen und Informationen ausgetauscht, was zu einer guten Zusammenarbeit führte. Unsere Aufgaben waren klar aufgeteilt, und wir konnten von den individuellen Stärken jedes Teammitglieds profitieren. Die eine Hälfte des Teams hat sich auf das Design in Figma und die Präsentation konzentriert, während die andere Hälfte sich dem Programmieren gewidmet hat. Wir haben jedoch schnell gemerkt, dass der Programmieraufwand viel grösser war, weshalb wir das CSS dann der Designgruppe übergeben haben. 
 
